@@ -4,7 +4,7 @@ import React from "react";
 const FlashSaleSection = () => {
   return (
     <div>
-      <div>
+      <div className="flex justify-between">
         <h2>Flash Sale</h2>
         <Button>View All</Button>
       </div>
