@@ -1,4 +1,11 @@
 import React from "react";
+import EmblaCarousel from "../emblaCarousel/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
+import "../emblaCarousel/embla.css";
+
+const OPTIONS: EmblaOptionsType = {};
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const HeroSection = () => {
   return (
@@ -15,7 +22,9 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div></div>
+      <div>
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      </div>
     </div>
   );
 };
