@@ -1,14 +1,17 @@
-import { Button } from "@nextui-org/react";
 import React from "react";
+import Button from "../button/Button";
+import ProductCard from "../productCard/ProductCard";
 
 const FlashSaleSection = () => {
   return (
-    <div>
+    <div className="mt-24">
       <div className="flex justify-between">
-        <h2>Flash Sale</h2>
+        <h2 className="text-[#3D3D3D] text-4xl font-bold">Flash Sale</h2>
         <Button>View All</Button>
       </div>
-      <div>4 Cards</div>
+      <div>
+        <ProductCard />
+      </div>
     </div>
   );
 };
