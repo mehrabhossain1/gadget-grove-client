@@ -11,16 +11,14 @@ import {
 
 const Header = () => {
   return (
-    <Navbar>
+    <Navbar className="bg-[#00000099] text-white">
       <NavbarBrand>
         {/* <AcmeLogo /> */}
         <p className="font-bold text-inherit">ACME</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
+          <Link href="#">Features</Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link href="#" aria-current="page">
@@ -28,9 +26,7 @@ const Header = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
+          <Link href="#">Integrations</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
