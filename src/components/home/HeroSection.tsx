@@ -22,7 +22,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div>
+      <div className="py-10">
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       </div>
     </div>
