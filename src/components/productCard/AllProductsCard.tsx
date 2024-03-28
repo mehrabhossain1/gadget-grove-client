@@ -2,8 +2,11 @@
 
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import Link from "next/link";
 
 const AllProductsCard = ({ allProducts }: any) => {
+  console.log(allProducts);
+
   return (
     <div className="gap-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
       {allProducts.map((item: any, index: any) => (
@@ -24,7 +27,9 @@ const AllProductsCard = ({ allProducts }: any) => {
             />
           </CardBody>
           <CardFooter className="text-small justify-between">
-            <b>{item.title}</b>
+            <Link href={`/products/${item._id}`}>
+              <b>{item.title}</b>
+            </Link>
             <p className="text-default-500">{item.price}</p>
           </CardFooter>
         </Card>
