@@ -2,7 +2,7 @@ import ProductCard from "@/components/productCard/ProductCard";
 import React from "react";
 
 const FlashSalePage = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/products");
+  const res = await fetch("https://ass-8-azure.vercel.app/api/v1/products");
   const data = await res.json();
 
   const flashSaleProducts = data.filter(
