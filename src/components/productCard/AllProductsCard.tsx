@@ -3,12 +3,10 @@
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
-const ProductCard = ({ flashSaleProducts }: any) => {
-  console.log(flashSaleProducts);
-
+const AllProductsCard = ({ allProducts }: any) => {
   return (
-    <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-      {flashSaleProducts.map((item: any, index: any) => (
+    <div className="gap-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
+      {allProducts.map((item: any, index: any) => (
         <Card
           shadow="sm"
           key={index}
@@ -35,4 +33,4 @@ const ProductCard = ({ flashSaleProducts }: any) => {
   );
 };
 
-export default ProductCard;
+export default AllProductsCard;

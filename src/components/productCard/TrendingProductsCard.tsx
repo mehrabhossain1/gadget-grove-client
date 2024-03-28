@@ -3,12 +3,10 @@
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
-const ProductCard = ({ flashSaleProducts }: any) => {
-  console.log(flashSaleProducts);
-
+const TrendingProductsCard = ({ sortedProducts }: any) => {
   return (
     <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-      {flashSaleProducts.map((item: any, index: any) => (
+      {sortedProducts.map((item: any, index: any) => (
         <Card
           shadow="sm"
           key={index}
@@ -27,7 +25,7 @@ const ProductCard = ({ flashSaleProducts }: any) => {
           </CardBody>
           <CardFooter className="text-small justify-between">
             <b>{item.title}</b>
-            <p className="text-default-500">{item.price}</p>
+            <p className="text-default-500">{item.ratings}</p>
           </CardFooter>
         </Card>
       ))}
@@ -35,4 +33,4 @@ const ProductCard = ({ flashSaleProducts }: any) => {
   );
 };
 
-export default ProductCard;
+export default TrendingProductsCard;
