@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
 } from "@nextui-org/react";
 // import {AcmeLogo} from "./AcmeLogo.jsx";
 

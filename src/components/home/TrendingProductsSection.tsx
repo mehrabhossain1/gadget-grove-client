@@ -4,7 +4,7 @@ import TrendingProductsCard from "../productCard/TrendingProductsCard";
 import Link from "next/link";
 
 const TrendingProductsSection = async () => {
-  const res = await fetch("https://ass-8-azure.vercel.app/api/v1/products", {
+  const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`, {
     next: {
       revalidate: 30,
     },
