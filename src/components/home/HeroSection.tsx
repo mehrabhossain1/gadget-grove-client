@@ -1,5 +1,4 @@
-import React from "react";
-import EmblaCarousel from "../emblaCarousel/EmblaCarousel";
+import SwiperCarousel from "../swiperCarousel/SwiperCarousel";
 
 const HeroSection = () => {
   return (
@@ -20,7 +19,7 @@ const HeroSection = () => {
         </div>
 
         <div className="py-10">
-          <EmblaCarousel />
+          <SwiperCarousel />
         </div>
       </div>
     </div>
