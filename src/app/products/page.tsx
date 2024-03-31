@@ -1,5 +1,4 @@
 import AllProductsCard from "@/components/productCard/AllProductsCard";
-import React from "react";
 
 const AllProductsPage = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);

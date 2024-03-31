@@ -1,5 +1,4 @@
 import ProductCard from "@/components/productCard/ProductCard";
-import React from "react";
 
 const FlashSalePage = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);

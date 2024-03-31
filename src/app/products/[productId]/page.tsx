@@ -1,6 +1,6 @@
 import SingleProductDetails from "@/components/productCard/SingleProductDetails";
-import React from "react";
 
+// used SSG for first 10 products
 export const generateStaticParams = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);
   const products = await res.json();

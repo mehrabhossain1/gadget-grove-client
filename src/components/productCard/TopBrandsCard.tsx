@@ -1,12 +1,4 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Button,
-} from "@nextui-org/react";
+import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
 
 const TopBrandsCard = () => {
   return (
