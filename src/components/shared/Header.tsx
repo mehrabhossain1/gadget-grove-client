@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   const handleMenuItemClick = () => {
-    setIsMenuOpen(false); // Close the menu when a link is clicked
+    setIsMenuOpen(false);
   };
 
   return (
