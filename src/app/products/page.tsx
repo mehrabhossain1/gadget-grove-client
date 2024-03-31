@@ -6,7 +6,7 @@ const AllProductsPage = async () => {
   const allProducts = await res.json();
 
   return (
-    <div>
+    <div className="max-w-[1250px] mx-auto">
       <h2 className="text-[#3D3D3D] text-4xl font-bold pt-10">
         Our Collection Of Products
       </h2>

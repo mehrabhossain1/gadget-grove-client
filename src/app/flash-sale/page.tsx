@@ -11,7 +11,7 @@ const FlashSalePage = async () => {
   //   console.log(flashSaleProducts);
 
   return (
-    <div>
+    <div className="max-w-[1250px] mx-auto">
       <h2 className="text-3xl font-bold py-5">Flash Sale</h2>
       <ProductCard flashSaleProducts={flashSaleProducts} />
     </div>

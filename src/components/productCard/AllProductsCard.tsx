@@ -5,7 +5,7 @@ import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import Link from "next/link";
 
 const AllProductsCard = ({ allProducts }: any) => {
-  console.log(allProducts);
+  // console.log(allProducts);
 
   return (
     <div className="gap-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
