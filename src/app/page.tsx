@@ -5,9 +5,9 @@ import TrendingProductsSection from "@/components/home/TrendingProductsSection";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="">
       <HeroSection />
-      <div className="max-w-[1250px] mx-auto">
+      <div className="max-w-[1250px] mx-auto px-2">
         <FlashSaleSection />
         <TopBrandsSection />
         <TrendingProductsSection />
