@@ -2,12 +2,13 @@
 
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import Link from "next/link";
 
 const ProductCard = ({ flashSaleProducts }: any) => {
-  console.log(flashSaleProducts);
+  // console.log(flashSaleProducts);
 
   return (
-    <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
+    <div className="gap-4 grid grid-cols-2 sm:grid-cols-4">
       {flashSaleProducts.map((item: any, index: any) => (
         <Card
           shadow="sm"
@@ -26,8 +27,10 @@ const ProductCard = ({ flashSaleProducts }: any) => {
             />
           </CardBody>
           <CardFooter className="text-small justify-between">
-            <b>{item.title}</b>
-            <p className="text-default-500">{item.price}</p>
+            <Link href={`/products/${item._id}`}>
+              <b>{item.title}</b>
+            </Link>
+            <p className=" text-red-400">${item.price}</p>
           </CardFooter>
         </Card>
       ))}

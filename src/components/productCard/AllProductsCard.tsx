@@ -8,7 +8,7 @@ const AllProductsCard = ({ allProducts }: any) => {
   // console.log(allProducts);
 
   return (
-    <div className="gap-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
+    <div className="gap-4 px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       {allProducts.map((item: any, index: any) => (
         <Card
           shadow="sm"
@@ -30,7 +30,7 @@ const AllProductsCard = ({ allProducts }: any) => {
             <Link href={`/products/${item._id}`}>
               <b>{item.title}</b>
             </Link>
-            <p className="text-default-500">{item.price}</p>
+            <p className="text-red-400">${item.price}</p>
           </CardFooter>
         </Card>
       ))}

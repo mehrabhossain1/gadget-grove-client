@@ -17,7 +17,7 @@ const FlashSaleSection = async () => {
 
   return (
     <div className="mt-24">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <h2 className="text-[#3D3D3D] text-4xl font-bold">
           <span className="text-red-400">Flash</span> Sale
         </h2>

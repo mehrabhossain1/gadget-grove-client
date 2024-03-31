@@ -10,7 +10,7 @@ export const generateStaticParams = async () => {
 };
 
 const SingleProductPage = async ({ params }: any) => {
-  console.log(params);
+  // console.log(params);
   const res = await fetch(
     `${process.env.BACKEND_URL}/api/v1/products/${params.productId}`,
     {
@@ -19,7 +19,7 @@ const SingleProductPage = async ({ params }: any) => {
   );
   const product = await res.json();
 
-  console.log("product single ", product);
+  // console.log("product single ", product);
   return (
     <div>
       <SingleProductDetails product={product} />
