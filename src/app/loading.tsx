@@ -1,10 +1,13 @@
-import React from "react";
+import { Spinner } from "@nextui-org/react";
 
 const Loading = () => {
   return (
-    <div>
-      <h1>Loading.....</h1>
-    </div>
+    <Spinner
+      className="h-screen w-full mx-auto flex items-center justify-start pt-10"
+      label="Loading"
+      color="success"
+      labelColor="success"
+    />
   );
 };
 

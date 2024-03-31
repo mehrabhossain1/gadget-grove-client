@@ -18,7 +18,7 @@ const TrendingProductsSection = async () => {
       <div className="flex justify-between items-center">
         <div className="w-1/2">
           <h2 className="text-[#3D3D3D] text-4xl font-bold">
-            Most Popular Products
+            Most <span className="text-red-400">Popular</span> Products
           </h2>
           <p className="pt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla

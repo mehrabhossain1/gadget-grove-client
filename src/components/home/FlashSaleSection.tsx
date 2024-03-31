@@ -18,7 +18,9 @@ const FlashSaleSection = async () => {
   return (
     <div className="mt-24">
       <div className="flex justify-between">
-        <h2 className="text-[#3D3D3D] text-4xl font-bold">Flash Sale</h2>
+        <h2 className="text-[#3D3D3D] text-4xl font-bold">
+          <span className="text-red-400">Flash</span> Sale
+        </h2>
         <Link href="/flash-sale">
           <Button>View All</Button>
         </Link>

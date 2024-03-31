@@ -9,7 +9,6 @@ import {
   NavbarMenu,
   NavbarContent,
   NavbarItem,
-  Button,
 } from "@nextui-org/react";
 import Link from "next/link";
 
@@ -18,12 +17,18 @@ const Header = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Categories", href: "/categories" },
+    { label: "Categories", href: "/" },
     { label: "Products", href: "/products" },
     { label: "Flash Sale", href: "/flash-sale" },
-    { label: "About Us", href: "/about-us" },
-    { label: "Contact Us", href: "/contact-us" },
+    { label: "About Us", href: "/" },
+    { label: "Contact Us", href: "/" },
+    { label: "Dashboard", href: "/dashboard" },
   ];
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <Navbar
       isBordered
@@ -54,21 +59,20 @@ const Header = () => {
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <div>Logo</div>
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">
+            Gadget<span className="text-red-400">Grove</span>
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarBrand>
-          <div>Logo</div>
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit text-3xl">
+            Gadget<span className="text-red-400">Grove</span>
+          </p>
         </NavbarBrand>
         {menuItems.map((item, index) => (
-          <NavbarItem
-            key={index}
-            isActive={window.location.pathname === item.href}
-          >
+          <NavbarItem key={index}>
             <Link href={item.href}>{item.label}</Link>
           </NavbarItem>
         ))}
@@ -76,7 +80,7 @@ const Header = () => {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
+          <NavbarMenuItem key={index} onClick={handleMenuItemClick}>
             <Link
               className="w-full"
               color={

@@ -4,7 +4,9 @@ import TopBrandsCard from "../productCard/TopBrandsCard";
 const TopBrandsSection = () => {
   return (
     <div className="text-center">
-      <h2 className="text-4xl font-bold">Top Brands</h2>
+      <h2 className="text-4xl font-bold">
+        Top <span className="text-red-400">Brands</span>
+      </h2>
       <p className="pt-3">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.

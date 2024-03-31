@@ -1,11 +1,5 @@
 import React from "react";
 import EmblaCarousel from "../emblaCarousel/EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
-import "../emblaCarousel/embla.css";
-
-const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const HeroSection = () => {
   return (
@@ -13,8 +7,9 @@ const HeroSection = () => {
       <div className="max-w-[1250px] mx-auto">
         <div className=" mx-auto text-center">
           <h1 className="text-5xl font-bold pt-20 leading-tight">
-            Crafting Comfort, Redefining Spaces. <br /> Your Home, Your
-            Signature Style!
+            Crafting <span className="text-red-400">Comfort</span>, Redefining
+            Spaces. <br /> Your Home, Your{" "}
+            <span className="text-red-400">Signature</span> Style!
           </h1>
           <p className="text-base font-normal pt-10 md:w-4/5 mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
