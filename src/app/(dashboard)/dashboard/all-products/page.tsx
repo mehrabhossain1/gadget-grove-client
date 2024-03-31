@@ -1,5 +1,4 @@
-import AllProductsCard from "@/components/productCard/AllProductsCard";
-import React from "react";
+import AllProductsTable from "@/components/dashboard/AllProductsTable";
 
 const AllProductsDashboard = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);
@@ -8,7 +7,7 @@ const AllProductsDashboard = async () => {
   return (
     <div>
       There are {allProducts.length} products in this page
-      <AllProductsCard allProducts={allProducts} />
+      <AllProductsTable allProducts={allProducts} />
     </div>
   );
 };

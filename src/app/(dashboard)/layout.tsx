@@ -1,3 +1,4 @@
+import Button from "@/components/button/Button";
 import Link from "next/link";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +8,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <h2 className="text-xl font-semibold mb-4">Sidebar</h2>
         <ul>
           <li className="mb-2">
-            <Link href="/dashboard/all-products">All Products</Link>
+            <Button>
+              <Link href="/dashboard/all-products">All Products</Link>
+            </Button>
           </li>
         </ul>
       </div>
