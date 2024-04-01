@@ -6,7 +6,8 @@ const AllProductsDashboard = async () => {
 
   return (
     <div>
-      There are {allProducts.length} products in this page
+      There are {allProducts.length}{" "}
+      <span className="text-red-400">products</span> in this page
       <AllProductsTable allProducts={allProducts} />
     </div>
   );
