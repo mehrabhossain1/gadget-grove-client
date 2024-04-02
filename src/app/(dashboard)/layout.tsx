@@ -5,7 +5,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen flex">
       <div className="w-1/5 bg-gray-200 p-4">
-        <h2 className="text-xl font-semibold mb-4">Sidebar</h2>
+        <h2 className="text-xl font-semibold mb-4">
+          <Link href="/">Home</Link>
+        </h2>
         <ul>
           <li className="mb-2">
             <Button>
