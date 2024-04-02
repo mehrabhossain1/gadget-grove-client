@@ -3,6 +3,7 @@ import AllProductsTable from "@/components/dashboard/AllProductsTable";
 const AllProductsDashboard = async () => {
   const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);
   const allProducts = await res.json();
+  console.log(allProducts);
 
   return (
     <div>
