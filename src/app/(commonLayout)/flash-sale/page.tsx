@@ -1,7 +1,11 @@
 import ProductCard from "@/components/productCard/ProductCard";
 
 const FlashSalePage = async () => {
-  const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`);
+  const res = await fetch(`${process.env.BACKEND_URL}/api/v1/products`, {
+    next: {
+      revalidate: 30,
+    },
+  });
   const data = await res.json();
 
   const flashSaleProducts = data.filter(
