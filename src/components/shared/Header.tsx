@@ -1,39 +1,17 @@
-"use client";
-
 import React from "react";
 import {
   Navbar,
   NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
   NavbarContent,
   NavbarItem,
+  Link,
+  Button,
 } from "@nextui-org/react";
-import Link from "next/link";
+// import {AcmeLogo} from "./AcmeLogo.jsx";
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    { label: "Home", href: "/" },
-    { label: "Brands", href: "/" },
-    { label: "Products", href: "/products" },
-    { label: "Flash Sale", href: "/flash-sale" },
-    { label: "About Us", href: "/" },
-    { label: "Contact Us", href: "/" },
-    { label: "Dashboard", href: "/dashboard" },
-  ];
-
-  const handleMenuItemClick = () => {
-    setIsMenuOpen(false);
-  };
-
+export default function Header() {
   return (
     <Navbar
-      isBordered
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
       classNames={{
         item: [
           "flex",
@@ -51,54 +29,37 @@ const Header = () => {
         ],
       }}
     >
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
+      <NavbarBrand>
+        {/* <AcmeLogo /> */}
+        <p className="font-bold text-inherit">ACME</p>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Customers
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/flash-sale">
+            Integrations
+          </Link>
+        </NavbarItem>
       </NavbarContent>
-
-      <NavbarContent className="sm:hidden pr-3" justify="center">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">
-            Gadget<span className="text-red-400">Grove</span>
-          </p>
-        </NavbarBrand>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            Sign Up
+          </Button>
+        </NavbarItem>
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
-        <NavbarBrand>
-          <p className="font-bold text-inherit text-3xl">
-            Gadget<span className="text-red-400">Grove</span>
-          </p>
-        </NavbarBrand>
-        {menuItems.map((item, index) => (
-          <NavbarItem key={index}>
-            <Link href={item.href}>{item.label}</Link>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
-
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index} onClick={handleMenuItemClick}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
-};
-
-export default Header;
+}
