@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
 
         <div className="py-10">
-          <SwiperCarousel />
+          <h1>Hello carousel</h1>
         </div>
       </div>
     </div>

@@ -12,7 +12,8 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
+import logo from "@/assets/logo.jpg";
+import Image from "next/image";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -35,8 +36,8 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit">ACME</p>
+          <Image src={logo} width={150} height={150} alt="logo" />
+          {/* <p className="font-bold text-inherit">Gadget Galaxy</p> */}
         </NavbarBrand>
       </NavbarContent>
 
