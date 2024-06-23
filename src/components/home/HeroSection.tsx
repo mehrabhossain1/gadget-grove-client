@@ -5,8 +5,14 @@ import slide3 from "@/assets/slider-3.jpg";
 
 const HeroSection = () => {
   return (
-    <div className=" bg-[#00000099] text-white">
-      <div className="max-w-[1250px] mx-auto h-[600px]">
+    <div className=" text-white">
+      <div
+        className="max-w-[1250px] mx-auto h-[600px]"
+        style={{
+          backgroundImage: `url(${"https://demo.fieldthemes.com/electronic/home3/modules/fieldslideshow/images/slider-222.jpg"})`,
+          backgroundSize: "cover",
+        }}
+      >
         <div className=" mx-auto text-center">
           <h1 className="text-5xl font-bold pt-20 leading-tight">
             Crafting <span className="text-red-400">Comfort</span>, Redefining
@@ -22,7 +28,7 @@ const HeroSection = () => {
         </div>
 
         <div className="py-10 flex items-center justify-center ">
-          <Image src={slide1} alt="Slide 1" width={600} height={600} />
+          {/* <Image src={slide1} alt="Slide 1" width={600} height={600} /> */}
         </div>
       </div>
     </div>
