@@ -16,136 +16,73 @@ import logo from "@/assets/logo.jpg";
 import Image from "next/image";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const currentPath = usePathname();
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  // const currentPath = usePathname();
 
-  const menuItems = [
-    "Home",
-    "Categories",
-    "Products",
-    "Flash Sale",
-    "About Us",
-    "Contact Us",
-  ];
+  // const menuItems = [
+  //   "Home",
+  //   "Categories",
+  //   "Products",
+  //   "Flash Sale",
+  //   "About Us",
+  //   "Contact Us",
+  // ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand>
-          <Image src={logo} width={150} height={150} alt="logo" />
-          {/* <p className="font-bold text-inherit">Gadget Galaxy</p> */}
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/"
-            className={
-              currentPath === "/"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/categories"
-            className={
-              currentPath === "/categories"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            Categories
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/products"
-            className={
-              currentPath === "/products"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            Products
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/flash-sale"
-            className={
-              currentPath === "/flash-sale"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            Flash Sale
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/about-us"
-            className={
-              currentPath === "/about-us"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            About Us
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/contact-us"
-            className={
-              currentPath === "/contact-us"
-                ? "text-red-400 font-semibold"
-                : "text-slate-600"
-            }
-          >
-            Contact Us
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
+    <nav className="bg-gray-800 p-4">
+      <div className=" mx-auto">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center">
+            <a href="/" className="text-white text-lg font-semibold">
+              My Website
+            </a>
+          </div>
+          <div className="hidden md:block">
+            <a
+              href="/"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+              Home
+            </a>
+            <a
+              href="/"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              About
+            </a>
+            <a
+              href="/"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Services
+            </a>
+            <a
+              href="/"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Contact
+            </a>
+          </div>
+          <div className="md:hidden">
+            {/* Mobile menu button */}
+            <button className="text-gray-400 hover:text-white focus:outline-none">
+              <svg
+                className="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
